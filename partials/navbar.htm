@@ -14,18 +14,18 @@ description = "navbar"
               </div>
               <div id="navbarMenuHeroA" class="navbar-menu">
                 <div class="navbar-end">
-                  <a class="navbar-item is-active">
+                  <a class="navbar-item {% if this.page.id == 'homepage' %}is-active{% endif %} " href="{{ 'homepage'|page }}">
                     Home
                   </a>
-                  <a class="navbar-item">
+                  <a class="navbar-item {% if this.page.id == 'cardapio' %}is-active{% endif %} " href="{{ 'cardapio'|page }}">
                     Cardapio
                   </a>
 
-                  <a class="navbar-item">
+                  <a class="navbar-item {% if this.page.id == 'sobrenos' %}is-active{% endif %} ">
                     Sobre Nós
                   </a>
 
-                  <a class="navbar-item">
+                  <a class="navbar-item {% if this.page.id == 'contato' %}is-active{% endif %} ">
                         Contato
                       </a>
 
