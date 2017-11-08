@@ -1,0 +1,80 @@
+description = "layout default"
+==
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="Indev Desenvolvimento Web">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Delivery For October CMS">
+    <link rel="icon" type="image/png" href="{{ 'assets/images/indev.png'|theme }}">
+    
+    <title>{{ this.page.title }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+<style>
+    .hero_top{
+        background-image: url('{{ 'assets/images/banner.jpeg' |theme  }}') !important;
+        background-size:100% 100% ;
+        background-repeat: no-repeat;
+      
+    }
+
+    .is-black .title ,.subtitle {
+        color:white !important;
+    }
+</style>
+
+{% styles %}
+
+</head>
+<body>
+   
+    <section class="hero hero_top is-black is-fullheight">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+             {% partial 'navbar'%}
+          </nav>
+        </div>
+      
+        <!-- Hero content: will be in the middle -->
+        <div class="hero-body" >
+          <div class="container has-text-centered" >
+            <h1 class="title">
+              E-Commerce
+            </h1>
+            <h2 class="subtitle">
+              Delivery
+            </h2>
+          </div>
+        </div>
+
+      </section>
+      
+       {% page %}
+
+
+
+
+
+            <footer class="footer">
+                {% partial 'footer' %}
+              </footer>
+
+        <!-- Scripts -->
+        <script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+
+        <script src="{{ 'assets/js/navbar.js'|theme }}"></script>
+        {% framework extras %}
+        {% scripts %}
+        
+    
+</body>
+</html>
